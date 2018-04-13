@@ -109,7 +109,7 @@ Below are example of created heat map and the final combined image.
 
 ### Possible Limitations
 
-The pipeline above did an fairly good job in detecting cars. It is reatively easy to tune the parameters of the pipeline but its lot more difficult to choose parameters to detect vehicles in varying lighting conditions. Also there were many false detection when I used linear kernal for SVM classifier, this was solved by using `rbf` kernal but time required to train model is more as compared to using linear kernal. Some more tweaking of parameters is required to detect vehicles of different size and shape.
+The pipeline above did an fairly good job in detecting cars. It is reatively easy to tune the parameters of the pipeline but its lot more difficult to choose parameters to detect vehicles in varying lighting conditions. Also there were many false detection when I used linear kernal for SVM classifier, this was solved by using `rbf` kernal but time required to train model is more as compared to using linear kernal. Some more tweaking of parameters is required to detect vehicles of different size ,shape and cars which are at some distance.
 
 ---
 
