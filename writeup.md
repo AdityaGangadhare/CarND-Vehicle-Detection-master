@@ -48,7 +48,7 @@ After trying differet values many times below parameter values gave me the best 
 
 #### Training Classifier
 
-I trained a linear SVM using and extracted the features from image using above parameters. I used an rbf kernel to train the classifier.
+I trained a linear SVM using and extracted the features from image using above parameters. I used an rbf kernel withe other default parameters to train the classifier. I used 8792 car images and 8968 non-car images to train my classifier. 
 Below are the training results I got-
 
 `75.15 Seconds to extract HOG features...`<br /> 
