@@ -28,7 +28,7 @@ Here is an example using the `YCrCb` color space and HOG parameters of `orientat
 
 ![alt text][image2]
 
-After trying differet values lot of time below parameter values gave me the best accuracy.
+After trying differet values many times below parameter values gave me the best accuracy.
 
 | Parameter | Value |
 |-----------|---------|
@@ -60,30 +60,30 @@ For these 10 labels:  [1. 1. 1. 1. 0. 1. 1. 0. 1. 1.]
 
 ### Sliding Window Search
 
-#### 1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
-
-I decided to search random window positions at random scales all over the image and came up with this (ok just kidding I didn't actually ;):
+Initially I used only single window of (96,96) size to search for cars. With only one window cars were not detected in some frames of the video. To overcome this I used four windows of different size. Also i varied the stride of windows(Overlapping) to detect cars more efficiently. Below images show cars detected by windows of different size.
 
 ![alt text][image3]
 
-#### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
+#### Pipeline
 
-Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
+I used and SVM classifier to detect cars in images using the parameters given above. I used YCrCb color space for HOG. Along with hog features I used features extracted by spatial binning and histograms of color. After extracting features from the images I split the images into training and test data. Using training data I trained the SVM classifier and got 98.28% accuracy.
+
+After training the classifier I fed the frames of videos to pipeline which will apply sliding window, heat maps and detect the cars.
 
 ![alt text][image4]
 ---
 
 ### Video Implementation
 
-#### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
 Here's a [link to my video result](./project_video.mp4)
 
 
-#### 2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
+#### Removing False Positives and Combining Overlapping Bounding Boxes
 
 I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
-
 Here's an example result showing the heatmap from a series of frames of video, the result of `scipy.ndimage.measurements.label()` and the bounding boxes then overlaid on the last frame of video:
+
+
 
 ### Here are six frames and their corresponding heatmaps:
 
