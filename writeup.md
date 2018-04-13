@@ -30,13 +30,15 @@ Here is an example using the `YCrCb` color space and HOG parameters of `orientat
 
 After trying differet values lot of time below parameter values gave me the best accuracy.
 
-Color Space = 'YCrCb'
-HOG orientations = 9
-HOG pixels per cell = 16 
-HOG cells per block = 2 
-HOG Channel = ALL
-Spatial binning dimensions = (16,16)
-Number of histogram bins = 32
+| Parameter | Value |
+|-----------|---------|
+| Color Space | YCrCb |
+| HOG orientations | 9 |
+| HOG pixels per cell | 16 |
+| HOG cells per block | 2 |
+| HOG Channel | ALL |
+| Spatial binning dimensions | (16,16) |
+| Number of histogram bins | 32 |
 
 #### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
