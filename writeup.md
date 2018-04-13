@@ -95,7 +95,7 @@ I used and SVM classifier to detect cars in images using the parameters given ab
 
 ### Video Implementation
 
-Here's a [link to my video result](./project_video.mp4)
+Here's a [link to my video result](./test_output_videos/output1.mp4)
 
 
 #### Removing False Positives and Combining Overlapping Bounding Boxes
