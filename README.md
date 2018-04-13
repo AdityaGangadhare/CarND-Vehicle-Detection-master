@@ -100,7 +100,7 @@ Here's a [link to my video result](./test_output_videos/output1.mp4)
 
 #### Removing False Positives and Combining Overlapping Bounding Boxes
 
-The sliding window search returns number of false positives. I created a heatmap to identify cluster of overlapping bounding boxes which are likly to be a car. Then I applied an threshold to the heatmap to remove the false positive detections. 
+The sliding window search returns number of false positives. I created a heatmap to identify cluster of overlapping bounding boxes which are likely to be a car. Then I applied an threshold to the heatmap to remove the false positive detections. 
 Below are example of created heat map and the final combined image.
 
 ![alt text][image5]
